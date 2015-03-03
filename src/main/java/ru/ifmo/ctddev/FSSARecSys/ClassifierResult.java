@@ -1,7 +1,7 @@
 package ru.ifmo.ctddev.FSSARecSys;
 
 
-public class EvaluationResult {
+public class ClassifierResult {
     /**
      * Accuracy computed on given DataSet with given Classifier
      */

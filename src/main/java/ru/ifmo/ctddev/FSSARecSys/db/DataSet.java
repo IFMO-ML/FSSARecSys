@@ -1,8 +1,8 @@
 package ru.ifmo.ctddev.FSSARecSys.db;
 
-import ru.ifmo.ctddev.FSSARecSys.EvaluationResult;
+import ru.ifmo.ctddev.FSSARecSys.ClassifierResult;
 import ru.ifmo.ctddev.FSSARecSys.FSSResult;
-import ru.ifmo.ctddev.FSSARecSys.calculators.Evaluator;
+import ru.ifmo.ctddev.FSSARecSys.calculators.Classifier;
 import ru.ifmo.ctddev.FSSARecSys.calculators.FSSAlgorithm;
 import weka.core.Instances;
 
@@ -33,7 +33,7 @@ public interface DataSet {
     /**
      * evaluate(classify or cluster) selected by algorithm features and store result
      */
-    public void evaluate(FSSAlgorithm algorithm, Evaluator evaluator);
-    public EvaluationResult getEvaluationResult(Evaluator evaluator, FSSAlgorithm algorithm);
-    public void updateEvaluationResult(Evaluator evaluator, FSSAlgorithm algorithm, EvaluationResult result);
+    public void evaluate(FSSAlgorithm algorithm, Classifier classifier);
+    public ClassifierResult getEvaluationResult(Classifier classifier, FSSAlgorithm algorithm);
+    public void updateEvaluationResult(Classifier classifier, FSSAlgorithm algorithm, ClassifierResult result);
 }

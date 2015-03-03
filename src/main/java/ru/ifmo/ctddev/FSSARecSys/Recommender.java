@@ -1,6 +1,6 @@
 package ru.ifmo.ctddev.FSSARecSys;
 
-import ru.ifmo.ctddev.FSSARecSys.calculators.Evaluator;
+import ru.ifmo.ctddev.FSSARecSys.calculators.Classifier;
 import ru.ifmo.ctddev.FSSARecSys.calculators.FSSAlgorithm;
 import ru.ifmo.ctddev.FSSARecSys.db.DataSet;
 import ru.ifmo.ctddev.FSSARecSys.utils.Pair;
@@ -10,7 +10,7 @@ import java.util.Collection;
 public class Recommender {
     private float alpha = 0;
     private float betta = 0;
-    private Evaluator evaluator;  // todo = Classifier.DEFAULT
+    private Classifier classifier;  // todo = Classifier.DEFAULT
     private Collection<FSSAlgorithm> algorithms;  // todo = FSSAlgorithms.ALL
 
     public RecommendationResult recommend(DataSet dataSet) {
@@ -24,7 +24,7 @@ public class Recommender {
         return null;
     }
 
-    public Recommender setClassifier(Evaluator evaluator) {
+    public Recommender setClassifier(Classifier classifier) {
         return this;
     }
 
