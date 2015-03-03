@@ -1,13 +1,13 @@
 package ru.ifmo.ctddev.FSSARecSys.db;
 
-import ru.ifmo.ctddev.FSSARecSys.calculators.Evaluator;
+import ru.ifmo.ctddev.FSSARecSys.calculators.Classifier;
 
 import java.io.File;
 
-public interface EvaluatorManager {
+public interface ClassifierManager {
     public String[] getAvailableClassifierNames();
 
-    public Evaluator get(String name);
+    public Classifier get(String name);
 
     public void register(String name, String className);
     public void register(String name, String className, String[] arguments);
