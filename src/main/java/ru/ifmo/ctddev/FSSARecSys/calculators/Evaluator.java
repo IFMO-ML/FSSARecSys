@@ -4,5 +4,5 @@ import ru.ifmo.ctddev.FSSARecSys.EvaluationResult;
 import ru.ifmo.ctddev.FSSARecSys.db.DataSet;
 
 public interface Evaluator {
-    public EvaluationResult evaluate(FSSAlgorithm algorithm, DataSet dataSet);
+    public EvaluationResult evaluate(DataSet dataSet);
 }
